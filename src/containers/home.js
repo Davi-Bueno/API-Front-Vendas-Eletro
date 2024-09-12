@@ -8,8 +8,10 @@ import Latest from '../components/Latest';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import getBlogTheme from '../theme/getBlogTheme';
+import { useNavigate } from 'react-router-dom';
 
 export default function Blog() {
+  const navigate = useNavigate();
   const [mode, setMode] = React.useState('light');
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const blogTheme = createTheme(getBlogTheme(mode));
@@ -43,7 +45,6 @@ export default function Blog() {
   return (
     <ThemeProvider theme={showCustomTheme ? blogTheme : defaultTheme}>
       <CssBaseline />
-      {}
       <NavBar 
         toggleCustomTheme={toggleCustomTheme}
         showCustomTheme={showCustomTheme}
@@ -51,13 +52,31 @@ export default function Blog() {
         toggleColorMode={toggleColorMode}
       />
       <AppAppBar
-       />
+        apUm="Mais Vendidos"
+        apDois="Sobre nós"
+        apTres="Regiões Eletro LTDA"
+        apQuatro="Promoções"
+        apCinco="Trabalhe conosco"
+        apSeis="Contatos"
+        onEntrarClick={() => navigate('/loja')}
+        entrar="Entrar"
+        onCadastrarClick={() => navigate('/login')}
+        cadastrar="Cadastrar"
+        // Note that we don't include the 'editar' prop here
+      />
       <Container
         maxWidth="lg"
         component="main"
         sx={{ display: 'flex', flexDirection: 'column', mt: 24, mb: 16, gap: 4 }}
       >
-        <MainContent />
+        <MainContent
+         label1="Mais Vendidos"
+         label2="Sobre nós"
+         label3="Regiões Eletro LTDA"
+         label4="Promoções"
+         label5="Trabalhe conosco"
+         label6="Contatos"
+         />
         <Latest />
       </Container>
       <Footer />

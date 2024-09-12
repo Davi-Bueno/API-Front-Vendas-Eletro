@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import MenuItem from "@mui/material/MenuItem";
@@ -13,7 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import Sitemark from "./SitemarkIcon";
 import { useNavigate } from "react-router-dom";
-
+import IconButton from "@mui/material/IconButton";
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -31,8 +30,16 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function AppAppBar({
   entrar = "Entrar",
   cadastrar = "Cadastrar",
+  editar,
   onEntrarClick,
   onCadastrarClick,
+  onEditarClick,
+  apUm,
+  apDois,
+  apTres,
+  apQuatro,
+  apCinco,
+  apSeis,
 }) {
   const [open, setOpen] = React.useState(false);
   const toggleDrawer = (newOpen) => () => {
@@ -65,34 +72,46 @@ export default function AppAppBar({
           >
             <Sitemark />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button variant="text" color="info" size="small">
-                Mais vendidos
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Sobre nós
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Regiões Eletro LTDA
-              </Button>
-              <Button variant="text" color="info" size="small">
-                Promoções
-              </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={{ minWidth: 0 }}
-              >
-                Trabalhe conosco
-              </Button>
-              <Button
-                variant="text"
-                color="info"
-                size="small"
-                sx={{ minWidth: 0 }}
-              >
-                Contatos
-              </Button>
+              {apUm && (
+                <Button variant="text" color="info" size="small">
+                  {apUm}
+                </Button>
+              )}
+              {apDois && (
+                <Button variant="text" color="info" size="small">
+                  {apDois}
+                </Button>
+              )}
+              {apTres && (
+                <Button variant="text" color="info" size="small">
+                  {apTres}
+                </Button>
+              )}
+              {apQuatro && (
+                <Button variant="text" color="info" size="small">
+                  {apQuatro}
+                </Button>
+              )}
+              {apCinco && (
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0 }}
+                >
+                  {apCinco}
+                </Button>
+              )}
+              {apSeis && (
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0 }}
+                >
+                  {apSeis}
+                </Button>
+              )}
             </Box>
           </Box>
           <Box
@@ -102,6 +121,16 @@ export default function AppAppBar({
               alignItems: "center",
             }}
           >
+            {editar && ( // Render "Editar" button only if prop is provided
+              <Button
+                color="primary"
+                variant="text"
+                size="small"
+                onClick={onEditarClick}
+              >
+                {editar}
+              </Button>
+            )}
             <Button
               color="primary"
               variant="text"
