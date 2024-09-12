@@ -1,70 +1,207 @@
-# Getting Started with Create React App
+# API de Vendas de Eletrodomésticos - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta é a aplicação frontend para gerenciar um sistema de vendas de eletrodomésticos, desenvolvida com React e Material-UI.
 
-## Available Scripts
+## Componentes
 
-In the project directory, you can run:
+### AppAppBar.js
+- [ ] Barra de navegação superior da aplicação
+  - [ ] Logo da aplicação
+  - [ ] Links de navegação
+  - [ ] Botão de login/logout
 
-### `npm start`
+### MainContent.js
+- [ ] Componente principal que renderiza o conteúdo da página
+  - [ ] Tabelas para exibir dados (clientes, vendedores, eletrodomésticos, carrinhos)
+  - [ ] Campos de busca para cada tabela
+  - [ ] Botões para criar novos itens
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Latest.js
+- [ ] Exibe as últimas atualizações ou itens recentes (se aplicável)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Footer.js
+- [ ] Rodapé da aplicação com links e informações adicionais
 
-### `npm test`
+### NavBar.js
+- [ ] Barra de navegação lateral (se aplicável)
+  - [ ] Navegação entre diferentes seções da aplicação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Containers
 
-### `npm run build`
+### loja.js
+- [ ] Componente principal que gerencia o estado da aplicação
+  - [ ] Estados para clientes, vendedores, eletrodomésticos e carrinhos
+  - [ ] Funções para CRUD de todas as entidades
+  - [ ] Lógica de autenticação
+  - [ ] Renderização de modais para criação/edição de itens
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Temas e Customizações
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### getBlogTheme.js
+- [ ] Define o tema personalizado da aplicação
+  - [ ] Paleta de cores para modos claro e escuro
+  - [ ] Tipografia personalizada
+  - [ ] Estilos de componentes customizados
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ToggleColorMode
+- [ ] Implementado no componente principal (loja.js)
+  - [ ] Permite alternar entre os modos claro e escuro da aplicação
 
-### `npm run eject`
+## Páginas Principais
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Página de Login de Administrador
+- [ ] Acesso restrito para administradores
+- [ ] Permite acesso ao painel de controle para realizar operações CRUD em todas as tabelas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Painel de Controle do Administrador
+- [ ] Interface para gerenciamento de todas as entidades (clientes, vendedores, eletrodomésticos, carrinhos)
+- [ ] Tabelas com funcionalidades CRUD para cada entidade
+- [ ] Filtros e buscas avançadas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Página de Compras de Eletrodomésticos
+- [ ] Exibe catálogo de eletrodomésticos disponíveis
+- [ ] Permite aos clientes adicionar itens ao carrinho
+- [ ] Implementa funcionalidades de filtro e busca de produtos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Página de Cadastro de Clientes
+- [ ] Formulário para novos clientes se cadastrarem
+- [ ] Validação de campos e feedback em tempo real
 
-## Learn More
+### Interface do Carrinho de Compras
+- [ ] Exibe itens adicionados ao carrinho
+- [ ] Permite ajustar quantidades e remover itens
+- [ ] Calcula total da compra
+- [ ] Opção para finalizar a compra
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Funcionalidades Detalhadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Gerenciamento de Clientes**
+   - [ ] Listar todos os clientes em uma tabela paginada
+   - [ ] Modal para criar novo cliente com campos validados
+   - [ ] Modal para editar cliente existente
+   - [ ] Confirmação para deletar cliente
+   - [ ] Campo de busca com filtragem em tempo real
 
-### Code Splitting
+2. **Gerenciamento de Vendedores**
+   - [ ] Listar todos os vendedores em uma tabela paginada
+   - [ ] Modal para criar novo vendedor
+   - [ ] Modal para editar vendedor existente
+   - [ ] Confirmação para deletar vendedor
+   - [ ] Campo de busca com filtragem em tempo real
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Gerenciamento de Eletrodomésticos**
+   - [ ] Listar todos os eletrodomésticos em uma tabela paginada
+   - [ ] Modal para criar novo eletrodoméstico com campos para nome, valor e ID do vendedor
+   - [ ] Modal para editar eletrodoméstico existente
+   - [ ] Confirmação para deletar eletrodoméstico
+   - [ ] Campo de busca com filtragem em tempo real
 
-### Analyzing the Bundle Size
+4. **Gerenciamento de Carrinhos**
+   - [ ] Listar todos os carrinhos em uma tabela paginada
+   - [ ] Modal para criar novo carrinho com campos para data de criação, ID do cliente e ID do vendedor
+   - [ ] Modal para editar carrinho existente
+   - [ ] Confirmação para deletar carrinho
+   - [ ] Campo de busca com filtragem em tempo real
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. **Gerenciamento de CarrinhosEletro (Itens do Carrinho)**
+   - [ ] Listar todos os itens de carrinhos em uma tabela paginada
+   - [ ] Interface para adicionar/remover eletrodomésticos a um carrinho
+   - [ ] Edição de quantidades de itens no carrinho
+   - [ ] Cálculo automático de subtotais e total do carrinho
 
-### Making a Progressive Web App
+6. **Autenticação**
+   - [ ] Modal de login com campos para usuário e senha
+   - [ ] Armazenamento do token JWT no localStorage
+   - [ ] Logout com remoção do token e redirecionamento
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+7. **Tema e Modo de Cor**
+   - [ ] Toggle para alternar entre modo claro e escuro
+   - [ ] Tema personalizado aplicado a todos os componentes Material-UI
 
-### Advanced Configuration
+## A Implementar na API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **CRUD Completo de Carrinhos**
+   - [ ] Implementar endpoints para criar, ler, atualizar e deletar carrinhos
+   - [ ] Incluir validações e tratamento de erros
 
-### Deployment
+2. **CRUD Completo de CarrinhosEletro**
+   - [ ] Implementar endpoints para gerenciar itens dentro de um carrinho
+   - [ ] Incluir lógica para atualizar quantidades e calcular totais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Endpoint para Finalização de Compra**
+   - [ ] Implementar lógica para processar a compra
+   - [ ] Atualizar estoque de eletrodomésticos
+   - [ ] Gerar registro de venda
 
-### `npm run build` fails to minify
+4. **Melhorias na Autenticação e Autorização**
+   - [ ] Implementar diferentes níveis de acesso (cliente, vendedor, administrador)
+   - [ ] Adicionar tokens de refresh para melhor segurança
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. **Endpoints para Relatórios**
+   - [ ] Implementar endpoints para gerar relatórios de vendas, estoque, etc.
+
+## A Implementar no Frontend
+
+1. **Interface para o Carrinho e CarrinhoEletro**
+   - [ ] Desenvolver componentes para exibir e gerenciar itens no carrinho
+   - [ ] Implementar funcionalidades de adicionar, remover e atualizar quantidades
+
+2. **Página de Compras dos Eletrodomésticos**
+   - [ ] Criar interface de catálogo de produtos
+   - [ ] Implementar funcionalidades de filtro, ordenação e busca
+   - [ ] Adicionar botões para adicionar itens ao carrinho
+
+3. **Página de Cadastro dos Clientes**
+   - [ ] Desenvolver formulário de cadastro com validações
+   - [ ] Implementar feedback visual e mensagens de erro/sucesso
+
+4. **Melhorias na Página de Administração**
+   - [ ] Adicionar mais opções de filtro e busca avançada
+   - [ ] Implementar visualização de relatórios e dashboards
+
+5. **Implementação de Testes**
+   - [ ] Adicionar testes unitários para componentes React
+   - [ ] Implementar testes de integração para fluxos principais
+
+## Comunicação com o Backend
+
+- [ ] A comunicação com o backend é feita através do Axios
+  - [ ] Instância do Axios configurada com a URL base da API
+  - [ ] Interceptor para adicionar o token JWT a todas as requisições
+  - [ ] Funções para todas as operações CRUD de cada entidade
+
+## Como Executar
+
+1. [ ] Certifique-se de que o Node.js está instalado em sua máquina
+2. [ ] Navegue até o diretório do projeto frontend
+3. [ ] Instale as dependências:
+    ```bash
+    npm install
+    ```
+4. [ ] Inicie a aplicação:
+    ```bash
+    npm start
+    ```
+5. [ ] A aplicação estará disponível em `http://localhost:3000` (ou outra porta, se configurada diferentemente)
+
+## Configuração
+
+- [ ] Configure a URL base da API no arquivo `axios.js`
+- [ ] Ajuste o tema no arquivo `getBlogTheme.js` conforme necessário
+- [ ] Personalize os textos e labels no arquivo de idiomas (se implementado)
+
+## Boas Práticas Implementadas
+
+- [ ] Uso de componentes funcionais e hooks do React
+- [ ] Gerenciamento de estado centralizado no componente principal
+- [ ] Separação de preocupações entre componentes de apresentação e containers
+- [ ] Uso de PropTypes para validação de props
+- [ ] Implementação de tratamento de erros e feedback ao usuário via Snackbars
+
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças maiores antes de submeter um pull request.
+
+## Licença
+
+[Inserir informações sobre a licença aqui]
