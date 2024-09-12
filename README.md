@@ -1,6 +1,62 @@
-# API de Vendas de Eletrodomésticos - Frontend
 
-Esta é a aplicação frontend para gerenciar um sistema de vendas de eletrodomésticos, desenvolvida com React e Material-UI.
+
+# Frontend da Aplicação de Vendas de Eletrodomésticos
+
+Este é o frontend da aplicação de vendas de eletrodomésticos, desenvolvido em React. Ele fornece uma interface de usuário para gerenciar clientes, vendedores, eletrodomésticos, carrinhos de compras e realizar operações de venda.
+
+## Tecnologias Utilizadas
+
+- React
+- Material-UI
+- Axios
+- React Router
+
+## Estrutura do Projeto
+Listagem de caminhos de pasta
+O n·mero de sÚrie do volume Ú 7E4A-8885
+C:/API Front
+ª   .env
+ª   .gitignore
+ª   estrutura.txt
+ª   JWT verify e auten.png
+ª   Modelo Conceitual do BD .png
+ª   package-lock.json
+ª   package.json
+ª   Swagger Eletrodomestico.jpeg
+ª   swagger.js
+ª   
++---API-vendas
+ª   ª   .gitignore
+ª   ª   app.js
+ª   ª   README.md
+ª   ª   
+ª   +---controller
+ª   ª       authController.js
+ª   ª       carrinho.js
+ª   ª       carrinhoEletro.js
+ª   ª       cliente.js
+ª   ª       eletrodomesticos.js
+ª   ª       vendedor.js
+ª   ª       
+ª   +---route
+ª   ª       carrinhoEletroRoutes.js
+ª   ª       carrinhoRoutes.js
+ª   ª       clientesRoutes.js
+ª   ª       eletroRoutes.js
+ª   ª       home.js
+ª   ª       vendedorRoutes.js
+ª   ª       
+ª   +---utils
+ª   ª       dateUtils.js
+ª   ª       
+ª   +---views
+ª           index.ejs
+ª           
++---node_modules
+ª   ª   .package-lock.json
+ª   ª   
+
+
 
 ## Componentes
 
