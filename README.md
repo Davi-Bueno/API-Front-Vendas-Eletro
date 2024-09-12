@@ -12,67 +12,67 @@ Este é o frontend da aplicação de vendas de eletrodomésticos, desenvolvido e
 - React Router
 
 ## Estrutura do Projeto
-## Estrutura do Projeto
-/API Front
-./public
-    estrutura.txt
-    favicon.ico
-    index.html
-    logo192.png
-    logo512.png
-    manifest.json
-    robots.txt
-./src
-|   App.css
-|   App.js
-|   App.test.js
-|   axios.js
-|   estrutura.txt
-|   index.css
-|   index.js
-|   logo.svg
-|   reportWebVitals.js
-|   setupTests.js
-|   
-+---components
-|       AppAppBar.js
-|       authToken.js
-|       Footer.js
-|       Latest.js
-|       MainContent.js
-|       NavBar.js
-|       SitemarkIcon.js
-|       ToggleColorMode.js
-|       
-+---containers
-|       home.js
-|       login.js
-|       loja.js
-|       
-\---theme
-    |   getBlogTheme.js
-    |   themePrimitives.js
-    |   
-    +---customizations
-    |       dataDisplay.js
-    |       feedback.js
-    |       index.js
-    |       inputs.js
-    |       navigation.js
-    |       surfaces.js
-    |       
-    \---fotos
-            Airfry.png
-            atividade 2.png
-            Cafeteira.png
-            Diversos.png
-            Eletros.png
-            Fogao.png
-            Geladeria.png
-            logo eletro.jpg
-            microondas.png
-            Ventilador.png
-           monte em estrutura readme.md
+# Estrutura do Projeto - API Front
+
+## Public
+- `estrutura.txt`
+- `favicon.ico`
+- `index.html`
+- `logo192.png`
+- `logo512.png`
+- `manifest.json`
+- `robots.txt`
+
+## Src
+- `App.css`
+- `App.js`
+- `App.test.js`
+- `axios.js`
+- `estrutura.txt`
+- `index.css`
+- `index.js`
+- `logo.svg`
+- `reportWebVitals.js`
+- `setupTests.js`
+
+### Components
+- `AppAppBar.js`
+- `authToken.js`
+- `Footer.js`
+- `Latest.js`
+- `MainContent.js`
+- `NavBar.js`
+- `SitemarkIcon.js`
+- `ToggleColorMode.js`
+
+### Containers
+- `home.js`
+- `login.js`
+- `loja.js`
+
+### Theme
+- `getBlogTheme.js`
+- `themePrimitives.js`
+
+#### Customizations
+- `dataDisplay.js`
+- `feedback.js`
+- `index.js`
+- `inputs.js`
+- `navigation.js`
+- `surfaces.js`
+
+#### Fotos
+- `Airfry.png`
+- `atividade 2.png`
+- `Cafeteira.png`
+- `Diversos.png`
+- `Eletros.png`
+- `Fogao.png`
+- `Geladeira.png`
+- `logo eletro.jpg`
+- `microondas.png`
+- `Ventilador.png`
 
 
 ## Componentes
