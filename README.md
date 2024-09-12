@@ -275,6 +275,3 @@ Este é o frontend da aplicação de vendas de eletrodomésticos, desenvolvido e
 
 Contribuições são bem-vindas! Por favor, abra uma issue para discutir mudanças maiores antes de submeter um pull request.
 
-## Licença
-
-[Inserir informações sobre a licença aqui]
